@@ -1,21 +1,20 @@
-# https://genezio.com/docs/project-structure/genezio-configuration-file/
-yamlVersion: 2
-name: nitro-app
-region: eu-central-1 # us-east-1 or eu-central-1
-environment:
-  NITRO_TEST_ENV: 123
 backend:
-  path: .output/
-  language:
-    name: js
-    runtime: nodejs20.x
-    packageManager: pnpm
-  functions:
-    - name: server
-      path: server/
-      entry: index.mjs
-      handler: handler
-      type: aws
+    functions:
+        - entry: index.mjs
+          handler: handler
+          name: server
+          path: server/
+          type: aws
+    language:
+        name: js
+        packageManager: pnpm
+        runtime: nodejs20.x
+    path: .output/
+environment:
+    NITRO_TEST_ENV: 123
 frontend:
-  path: .output/
-  publish: public/
+    path: .output/
+    publish: public/
+name: nitro-app
+region: eu-central-1
+yamlVersion: 2
