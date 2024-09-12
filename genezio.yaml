@@ -15,6 +15,7 @@ environment:
 frontend:
     path: .output/
     publish: public/
-name: nitro-app
+    subdomain: nitro-app-2323
+name: nitro-app-2323
 region: eu-central-1
 yamlVersion: 2
